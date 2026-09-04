@@ -9,6 +9,13 @@ body {
     background-color: #1a1a1a; 
 }
 
+.container{
+    display: flex;
+    flex-direction: column;
+   
+
+}
+
 
 .navbar {
     display: flex;
@@ -82,6 +89,70 @@ body {
 
 
 .btn-entrar span {
+    display: inline-block;
+    transform: skewX(30deg); 
+}
+
+
+/*Parte Do header */
+
+.header-main{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    height: 400px;
+    width: 100%;
+}
+
+.header-img{
+    position: absolute;
+    z-index: -99;
+    height: 100%;
+    display: flex;
+    width: 100%;
+    opacity: 40%;
+}
+
+.header-textos{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    margin-left: 20px;
+    text-align: left;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+}
+
+.texto-destaque{
+    color: #aaff00 ;
+}
+
+.header-para{
+    width: 50%;
+    font-weight: 400;
+}
+
+
+.header-DivBtn{
+    display: flex;
+    align-items: center;
+}
+
+.header-btn{
+    display: inline-block;
+    background-color: #8a2be2; 
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 12px 40px;
+    transform: skewX(-30deg); 
+    transition: background-color 0.3s ease;
+}
+
+.header-btn span {
     display: inline-block;
     transform: skewX(30deg); 
 }
