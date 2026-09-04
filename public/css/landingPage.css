@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif, Arial;
+}
+
+body {
+    background-color: #1a1a1a; 
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 15px 50px;
+    height: 90px;
+}
+
+
+.logo a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo img {
+    height: 50px; 
+    width: auto; 
+    object-fit: contain;
+    border-radius: 4px; 
+}
+
+
+.nav-paginas {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+}
+
+
+.nav-paginas li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+
+.nav-paginas li a:hover {
+    color: #ccff00;
+}
+
+
+.btnAtivo {
+    color: #ccff00;
+}
+
+
+.nav-btnLogin {
+    display: flex;
+    align-items: center;
+}
+
+.btn-entrar {
+    display: inline-block;
+    background-color: #ccff00; 
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 12px 40px;
+    transform: skewX(-30deg); 
+    transition: background-color 0.3s ease;
+}
+
+
+.btn-entrar span {
+    display: inline-block;
+    transform: skewX(30deg); 
+}
