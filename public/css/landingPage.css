@@ -150,6 +150,7 @@ body {
     padding: 12px 40px;
     transform: skewX(-30deg); 
     transition: background-color 0.3s ease;
+    border: none ;
 }
 
 .header-btn span {
@@ -366,4 +367,133 @@ body {
    cursor: pointer;
     padding: 5px;
 }
+
+
+/* Parte dos Generos */
+
+
+.sessao-generos {
+    background-color: #000000;
+    padding: 60px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.generos-titulo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+
+.generos-Cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+
+.generos-Card {
+    background-color: #242424; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px; 
+    padding: 35px 20px;
+    border-radius: 6px;
+    text-decoration: none; 
+    color: #ffffff;
+    
+ 
+    border: 2px solid transparent; 
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.genero-Icone {
+    height: 55px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+
+.generos-Card h3 {
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.generos-Card p {
+    font-size: 0.75rem;
+    color: #a0a0a0; 
+    line-height: 1.4;
+    text-align: center;
+}
+
+
+.generos-Card:hover {
+    border-color: #8a2be2; 
+}
+
+
+.generos-Card:hover {
+    transform: translateY(-5px);
+}
+
+/* Parte do Footer*/
+.footer-main {
+    background-color: #3b1e5a; 
+    padding: 60px 20px;
+    color: #ffffff;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 1000px; 
+    margin: 0 auto; 
+    gap: 40px;
+}
+
+
+.footer-colunaT {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footer-colunaT h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+
+.footer-colunaT h4::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px; 
+    background-color: #ccff00; 
+    margin-top: 8px; 
+}
+
+
+.footer-colunaT p, 
+.footer-colunaT a {
+    font-size: 0.85rem;
+    color: #d3d3d3;
+    line-height: 1.6;
+    text-decoration: none; 
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
 
