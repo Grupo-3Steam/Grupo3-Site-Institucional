@@ -7,25 +7,23 @@
 
 body {
     background-color: black; 
+    overflow-x: hidden; /* Evita rolagem horizontal indesejada */
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
-   
-
 }
 
-
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #000000;
     padding: 15px 50px;
-    height: 90px;
+    min-height: 90px;
 }
-
 
 .logo a {
     color: #ffffff;
@@ -42,14 +40,12 @@ body {
     border-radius: 4px; 
 }
 
-
 .nav-paginas {
     display: flex;
     align-items: center;
     gap: 40px;
     list-style: none;
 }
-
 
 .nav-paginas li a {
     color: #ffffff;
@@ -59,16 +55,9 @@ body {
     transition: color 0.3s ease;
 }
 
-
-.nav-paginas li a:hover {
+.nav-paginas li a:hover, .btnAtivo {
     color: #ccff00;
 }
-
-
-.btnAtivo {
-    color: #ccff00;
-}
-
 
 .nav-btnLogin {
     display: flex;
@@ -87,24 +76,21 @@ body {
     transition: background-color 0.3s ease;
 }
 
-
 .btn-entrar span {
     display: inline-block;
     transform: skewX(30deg); 
 }
 
-
-/*Parte Do header */
-
-.header-main{
+/* Header */
+.header-main {
     position: relative;
     display: flex;
     overflow: hidden;
-    height: 400px;
+    min-height: 400px;
     width: 100%;
 }
 
-.header-img{
+.header-img {
     position: absolute;
     z-index: -99;
     height: 100%;
@@ -113,34 +99,39 @@ body {
     opacity: 40%;
 }
 
-.header-textos{
+.header-img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.header-textos {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 400px;
     width: 50%;
     margin-left: 20px;
     text-align: left;
     justify-content: center;
     gap: 20px;
     color: white;
+    padding: 20px 0;
 }
 
-.texto-destaque-verde{
+.texto-destaque-verde {
     color: #aaff00 ;
 }
 
-.header-para{
-    width: 50%;
+.header-para {
+    width: 80%;
     font-weight: 400;
 }
 
-
-.header-DivBtn{
+.header-DivBtn {
     display: flex;
     align-items: center;
 }
 
-.header-btn{
+.header-btn {
     display: inline-block;
     background-color: #8a2be2; 
     color: white;
@@ -151,6 +142,7 @@ body {
     transform: skewX(-30deg); 
     transition: background-color 0.3s ease;
     border: none ;
+    cursor: pointer;
 }
 
 .header-btn span {
@@ -158,21 +150,17 @@ body {
     transform: skewX(30deg); 
 }
 
-
-/* Banner que fica em baixo da Header  */
-
-
+/* Painel */
 .sessao-painel {
     position: relative;
     width: 100%;
-    height: 550px; 
+    min-height: 550px; 
     background-color: #0d0d0d;
     overflow: hidden;
     display: flex;
     align-items: center;
     margin-top: 30px;
 }
-
 
 .painel-img {
     position: absolute;
@@ -184,8 +172,7 @@ body {
     z-index: 1;
 }
 
-
-.painel-DivTexto{
+.painel-DivTexto {
     position: absolute;
     right: -10%;
     width: 60%;
@@ -196,7 +183,6 @@ body {
     align-items: center;
     z-index: 2;
 }
-
 
 .painel-DivTexto::before {
     content: '';
@@ -209,7 +195,6 @@ body {
     border-left: 5px solid #ccff00;
 }
 
-
 .painel-DivTexto::after {
     content: '';
     position: absolute;
@@ -221,9 +206,7 @@ body {
     border-left: 5px solid #8a2be2;
 }
 
-
 .painel-conteudo {
- 
     transform: skewX(15deg); 
     padding-left: 10%; 
     padding-right: 15%; 
@@ -243,34 +226,31 @@ body {
 }
 
 /* Jogos Populares */
-
-.sessao-JogosPopulares{
+.sessao-JogosPopulares {
     margin: 15px 20px;
     padding: 0px 10px;
- 
 }
 
-.jogosPopulares-titulo{
+.jogosPopulares-titulo {
     color: white;
     margin-bottom: 20px;
 }
 
-.div-Cards{
+.div-Cards {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.div-Card{
+.div-Card {
     display: flex;
     width: 100%;
-    height: 70px;
+    min-height: 70px;
     background-color: #252525;
     color: white;
-    
 }
 
-.card-Ranq{
+.card-Ranq {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -280,24 +260,21 @@ body {
     color: #aaff00;
 }
 
-.card-img img{
-    height: 100%; 
+.card-img img {
+    height: 70px; 
     width: auto; 
     object-fit: contain;
-    
 }
 
-.card-InfoBase{
+.card-InfoBase {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-   
     margin-left: 20px;
+    flex: 1; /* Permite que ocupe o espaço extra */
 }
 
-.card-Plataformas{
-    height: 100%;
+.card-Plataformas {
     display: flex;
     flex-direction: column;
     margin: 0 50px;
@@ -305,9 +282,9 @@ body {
     color: gray;
 }
 
-.card-DivBtn{
-    height: 100%;
+.card-DivBtn, .card-DivBtn2 {
     display: flex;
+    align-items: center;
     margin-left: auto;
 }
 
@@ -316,7 +293,7 @@ body {
     padding-right:10px ;
 }
 
-.card-Btn{
+.card-Btn {
     background-color: #8a2be2; 
     color: #ffffff;
     text-decoration: none;
@@ -326,21 +303,10 @@ body {
     border: none;
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
     cursor: pointer;
-}
-
-
-
-/*Botoes extra pra ver qual o melhor */
-
-.card-DivBtn2{
     height: 100%;
-    display: flex;
-    margin-left: auto;
 }
 
-
-
-.card-Btn2{
+.card-Btn2 {
     background-color: #8a2be2; 
     color: #ffffff;
     text-decoration: none;
@@ -350,12 +316,11 @@ body {
     border: none;
     border-radius: 20px;
     margin: 10px;
-    padding: 5px;
+    padding: 10px 20px;
     cursor: pointer;
 }
 
-
-.card-Btn1{
+.card-Btn1 {
     background-color: #8a2be2; 
     color: #ffffff;
     text-decoration: none;
@@ -363,15 +328,12 @@ body {
     font-weight: 900;
     text-align: center;
     border: none;
-
-   cursor: pointer;
-    padding: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    height: 100%;
 }
 
-
-/* Parte dos Generos */
-
-
+/* Generos */
 .sessao-generos {
     background-color: #000000;
     padding: 60px 20px;
@@ -385,7 +347,6 @@ body {
     margin-bottom: 40px;
 }
 
-
 .generos-Cards {
     display: flex;
     justify-content: center;
@@ -394,7 +355,6 @@ body {
     max-width: 1200px;
     margin: 0 auto; 
 }
-
 
 .generos-Card {
     background-color: #242424; 
@@ -406,19 +366,15 @@ body {
     border-radius: 6px;
     text-decoration: none; 
     color: #ffffff;
-    
- 
     border: 2px solid transparent; 
     transition: border-color 0.3s ease, transform 0.2s ease;
 }
-
 
 .genero-Icone {
     height: 55px;
     width: auto;
     margin-bottom: 20px;
 }
-
 
 .generos-Card h3 {
     font-size: 1rem;
@@ -436,17 +392,12 @@ body {
     text-align: center;
 }
 
-
 .generos-Card:hover {
     border-color: #8a2be2; 
-}
-
-
-.generos-Card:hover {
     transform: translateY(-5px);
 }
 
-/* Parte do Footer*/
+/* Footer */
 .footer-main {
     background-color: #3b1e5a; 
     padding: 60px 20px;
@@ -462,19 +413,17 @@ body {
     gap: 40px;
 }
 
-
 .footer-colunaT {
     display: flex;
     flex-direction: column;
+    min-width: 200px;
 }
-
 
 .footer-colunaT h4 {
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 20px;
 }
-
 
 .footer-colunaT h4::after {
     content: '';
@@ -484,7 +433,6 @@ body {
     background-color: #ccff00; 
     margin-top: 8px; 
 }
-
 
 .footer-colunaT p, 
 .footer-colunaT a {
@@ -497,3 +445,108 @@ body {
 }
 
 
+
+
+
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .nav-paginas {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+
+    .header-textos {
+        width: 100%;
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .header-para {
+        width: 100%;
+    }
+
+
+    .sessao-painel {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .painel-img {
+        position: relative;
+        width: 100%;
+        height: 300px;
+    }
+
+    .painel-DivTexto {
+        position: relative;
+        width: 100%;
+        right: 0;
+        transform: none; 
+        padding: 40px 20px;
+    }
+    
+    .painel-DivTexto::before, .painel-DivTexto::after {
+        display: none;
+    }
+
+    .painel-conteudo {
+        transform: none; 
+        padding: 0;
+        text-align: center;
+    }
+
+ 
+    .div-Card {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .card-Ranq {
+        padding: 0;
+    }
+
+    .card-InfoBase {
+        margin-left: 0;
+    }
+
+    .card-Plataformas {
+        margin: 10px 0;
+    }
+
+    .card-DivBtn, .card-DivBtn2 {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .card-Btn {
+        clip-path: none; 
+        padding: 12px 20px;
+        border-radius: 4px;
+    }
+    
+  
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-colunaT h4::after {
+        margin: 8px auto 0 auto; 
+    }
+}
